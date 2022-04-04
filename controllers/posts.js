@@ -45,14 +45,16 @@ const getNewPostForm = async (req, res, next) => {
 };
 
 const addPost = async (req, res, next) => {
+  console.log(req.file);
   const data = req.body.user.toLowerCase();
-  console.log(data);
   const user = await new User.User({ user: data });
-  console.log(user);
   const newPost = await new Post.Post({
     user: user,
     location: req.body.location,
-    img: req.file.filename,
+    img: {
+      url: req.file.path,
+      filename: req.file.filename,
+    },
     caption: req.body.caption,
     details: {
       scientificName: req.body.scientificName,

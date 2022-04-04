@@ -12,13 +12,11 @@ const postSchema = new mongoose.Schema(
       default: "Planet earth",
     },
     img: {
-      required: true,
-      type: String,
-      default: "placeholder.jpg",
+      url: String,
+      filename: String,
     },
     likes: {
       type: Number,
-
       default: 0,
     },
     caption: {
