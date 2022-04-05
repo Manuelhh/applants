@@ -1,6 +1,7 @@
 const Post = require("../models/post");
 const User = require("../models/user");
 const Comment = require("../models/comment");
+const middleware = require("../middleware/middleware");
 
 const getHome = async (req, res, next) => {
   res.render("posts/home");
@@ -36,7 +37,8 @@ const deletePost = async (req, res, next) => {
   for (let i = 0; i < postToDelete.comments.length; i++) {
     commentsIds.push(postToDelete.comments[i]._id);
   }
-  await Comment.deleteMany({ _id: { $in: commentsIds } });
+  await Comment.deleteMany({ _id: { $in: commentsIds } }); // here
+  await middleware.cloudinary.uploader.destroy(postToDelete.img.filename);
   res.redirect("/applants/posts");
 };
 

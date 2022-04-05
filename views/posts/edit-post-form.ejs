@@ -43,7 +43,10 @@
                 <input autocomplete="off"
                 autocorrect="off"
                 autocapitalize="none"
-                spellcheck="false" id="location" type="text" name="location" />
+                spellcheck="false" id="location" type="text" name="location"
+                value="<%= post.location %> "
+                />
+               
               </div>
   
              
@@ -52,7 +55,9 @@
                 <input autocomplete="off"
                 autocorrect="off"
                 autocapitalize="none"
-                spellcheck="false" id="caption" type="text" name="caption" />
+                spellcheck="false" id="caption" type="text" name="caption" 
+                value="<%= post.caption  %> "
+                />
               </div>
   
               <div class="scientific-name-container">
@@ -60,7 +65,9 @@
                 <input autocomplete="off"
                 autocorrect="off"
                 autocapitalize="none"
-                spellcheck="false" id="scientificName" type="text" name="scientificName" />
+                spellcheck="false" id="scientificName" type="text" name="scientificName"
+                value="<%= post.details.scientificName  %> "
+                />
               </div>
   
               <div class="age-conatiner">
@@ -68,7 +75,9 @@
                 <input autocomplete="off"
                 autocorrect="off"
                 autocapitalize="none"
-                spellcheck="false"id="age" type="number" name="age" />
+                spellcheck="false"id="age" type="number" name="age"
+                value="<%= post.details.age %> "
+                />
               </div>
   
               <div class="petname-container">
@@ -76,7 +85,9 @@
                 <input autocomplete="off"
                 autocorrect="off"
                 autocapitalize="none"
-                spellcheck="false"id="petname" type="text" name="petname" />
+                spellcheck="false"id="petname" type="text" name="petname"
+                value="<%= post.details.petname %> "
+                />
               </div>
   
               <div class="origin-container">
@@ -84,7 +95,9 @@
                 <input autocomplete="off"
                 autocorrect="off"
                 autocapitalize="none"
-                spellcheck="false"id="originalFrom" type="text" name="originalFrom" />
+                spellcheck="false"id="originalFrom" type="text" name="originalFrom" 
+                value="<%= post.details.originalFrom %> "
+                />
               </div>
   
               <div class="care-container">
@@ -92,7 +105,9 @@
                 <input autocomplete="off"
                 autocorrect="off"
                 autocapitalize="none"
-                spellcheck="false"id="care" type="text" name="care" />
+                spellcheck="false"id="care" type="text" name="care" 
+                value="<%= post.details.care  %> "
+                />
               </div>
   
               <div class="button-container">
