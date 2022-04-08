@@ -180,7 +180,7 @@ It functions as social media app where one can create, read, update and delete p
 
 ### 4. Getting Started :
 
-Click [here](https://applants.herokuapp.com/) to checkout the app.
+Click [here](https://applants.herokuapp.com) to checkout the app.
 
 ---
 
